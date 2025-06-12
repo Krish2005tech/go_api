@@ -1,0 +1,155 @@
+Advanced Routing:
+
+-Middleware
+-Subrouting
+-Path Parameters
+-http methods
+-passing down context
+
+"net/http" package:
+https://pkg.go.dev/net/http#pkg-overview
+
+
+https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml
+nodemon --exec go run main.go --signal SIGTERM  
+
+To get data from a request:
+```go
+response, err := http.Get("http://example.com")
+resp, err := http.PostForm("http://example.com/form",
+	url.Values{"key": {"Value"}, "id": {"123"}})
+
+For control over HTTP client headers, redirect policy, and other settings, create a Client:
+client := &http.Client{
+        Timeout: time.Second * 10, // Set a timeout
+        checkRedirect: func(req *http.Request, via []*http.Request) error {
+            return http.ErrUseLastResponse // Prevent redirects
+        },
+    }
+    resp, err := client.Get("http://example.com")
+    if err != nil {
+        log.Fatal(err)
+    }
+    defer resp.Body.Close()
+    body, err := io.ReadAll(resp.Body)
+    if err != nil {
+        log.Fatal(err)
+    }
+    fmt.Println(string(body))
+
+req.Header.Add("If-None-Match", `W/"wyzzy"`)
+resp, err := client.Do(req)
+--
+
+Server in Go:
+
+http.Handle("/foo", fooHandler)
+
+http.HandleFunc("/bar", func(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "Hello, %q", html.EscapeString(r.URL.Path))
+})
+
+log.Fatal(http.ListenAndServe(":8080", nil))
+
+for more control over the server, create a Server instance:
+s := &http.Server{
+	Addr:           ":8080",
+	Handler:        myHandler,
+	ReadTimeout:    10 * time.Second,
+	WriteTimeout:   10 * time.Second,
+	MaxHeaderBytes: 1 << 20,
+}
+log.Fatal(s.ListenAndServe())
+
+
+----------
+http.HandleFunc(pattern, handlerFunc) registers a route.
+
+eg - http.HandleFunc("/", helloHandler)
+
+func helloHandler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "Hello, %s!", r.URL.Path[1:])
+}
+
+for handler functions, the first argument is the ResponseWriter and the second is the Request.
+w is used to write the response, and r contains the request data.
+imp variable is r.URL.Path, which contains the path of the request.
+
+http.ListenAndServe(addr, handler) starts the server.   
+http.ListenAndServe(":8080", nil)
+--
+ Routing and Multiplexers
+For more control, use a ServeMux:
+
+router := http.NewServeMux()
+router.HandleFunc("/foo", fooHandler)
+router.HandleFunc("/bar", barHandler)
+log.Fatal(http.ListenAndServe(":8080", router))
+
+ HTTP Request Object (*http.Request)
+Key fields:
+
+r.Method → GET, POST, etc.
+r.URL → path, query parameters
+r.Body → request body (use with io.ReadAll(r.Body))
+r.Header → map of headers
+r.Form, r.PostForm → after calling r.ParseForm()
+
+eg name := r.URL.Query().Get("name")
+// or r.FormValue("name") for both query and form data
+
+ Writing HTTP Responses
+w.WriteHeader(http.StatusOK)
+w.Header().Set("Content-Type", "application/json")
+w.Write([]byte(`{"status":"ok"}`))
+
+**
+ Serve Static Files
+
+fs := http.FileServer(http.Dir("./static"))
+http.Handle("/static/", http.StripPrefix("/static/", fs))
+
+---
+HTTP Client in Go
+Make GET/POST requests:
+
+resp, err := http.Get("https://api.example.com/data")
+defer resp.Body.Close()
+
+body, _ := io.ReadAll(resp.Body)
+fmt.Println(string(body))
+
+//Note defer is used to ensure the response body is closed after reading.
+
+custom HTTP Client:
+client := &http.Client{}
+data := strings.NewReader("name=krish")
+req, _ := http.NewRequest("POST", "http://example.com", data)
+req.Header.Set("Content-Type", "application/x-www-form-urlencoded")
+resp, _ := client.Do(req)
+
+
+Graceful Shutdown
+ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+defer cancel()
+server.Shutdown(ctx)
+
+JSON API Example:
+type User struct {
+	Name string `json:"name"`
+}
+
+func jsonHandler(w http.ResponseWriter, r *http.Request) {
+	var user User
+	json.NewDecoder(r.Body).Decode(&user)
+	json.NewEncoder(w).Encode(map[string]string{"hello": user.Name})
+}
+
+
+
+
+
+
+
+
+

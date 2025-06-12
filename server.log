@@ -3,3 +3,136 @@ time=2025-06-12T16:44:34.162+05:30 level=INFO msg="received request" method=GET 
 time=2025-06-12T16:44:54.281+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55544
 time=2025-06-12T16:45:04.787+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55546
 time=2025-06-12T16:45:04.787+05:30 level=ERROR msg="invalid operator" op=addi
+time=2025-06-12T16:55:38.557+05:30 level=INFO msg="Server starting on :8080"
+time=2025-06-12T16:55:47.071+05:30 level=INFO msg="received request" method=POST path=/calculate ip=[::1]:55899
+time=2025-06-12T16:55:47.071+05:30 level=ERROR msg="Invalid method" method=POST path=/calculate
+time=2025-06-12T16:55:47.096+05:30 level=INFO msg="received request" method=POST path=/calculate ip=[::1]:55900
+time=2025-06-12T16:55:47.096+05:30 level=ERROR msg="Invalid method" method=POST path=/calculate
+time=2025-06-12T16:55:47.114+05:30 level=INFO msg="received request" method=POST path=/calculate ip=[::1]:55901
+time=2025-06-12T16:55:47.114+05:30 level=ERROR msg="Invalid method" method=POST path=/calculate
+time=2025-06-12T16:55:47.133+05:30 level=INFO msg="received request" method=POST path=/calculate ip=[::1]:55902
+time=2025-06-12T16:55:47.133+05:30 level=ERROR msg="Invalid method" method=POST path=/calculate
+time=2025-06-12T16:55:47.151+05:30 level=INFO msg="received request" method=POST path=/calculate ip=[::1]:55903
+time=2025-06-12T16:55:47.151+05:30 level=ERROR msg="Invalid method" method=POST path=/calculate
+time=2025-06-12T16:55:47.170+05:30 level=INFO msg="received request" method=POST path=/calculate ip=[::1]:55904
+time=2025-06-12T16:55:47.170+05:30 level=ERROR msg="Invalid method" method=POST path=/calculate
+time=2025-06-12T16:55:47.189+05:30 level=INFO msg="received request" method=POST path=/calculate ip=[::1]:55905
+time=2025-06-12T16:55:47.189+05:30 level=ERROR msg="Invalid method" method=POST path=/calculate
+time=2025-06-12T16:55:47.223+05:30 level=INFO msg="received request" method=POST path=/calculate ip=[::1]:55906
+time=2025-06-12T16:55:47.223+05:30 level=ERROR msg="Invalid method" method=POST path=/calculate
+time=2025-06-12T16:55:47.250+05:30 level=INFO msg="received request" method=POST path=/calculate ip=[::1]:55907
+time=2025-06-12T16:55:47.250+05:30 level=ERROR msg="Invalid method" method=POST path=/calculate
+time=2025-06-12T16:55:47.268+05:30 level=INFO msg="received request" method=POST path=/calculate ip=[::1]:55908
+time=2025-06-12T16:55:47.268+05:30 level=ERROR msg="Invalid method" method=POST path=/calculate
+time=2025-06-12T16:56:04.005+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55912
+time=2025-06-12T16:56:04.030+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55913
+time=2025-06-12T16:56:04.054+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55914
+time=2025-06-12T16:56:04.074+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55915
+time=2025-06-12T16:56:04.091+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55916
+time=2025-06-12T16:56:04.110+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55917
+time=2025-06-12T16:56:04.128+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55918
+time=2025-06-12T16:56:04.145+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55919
+time=2025-06-12T16:56:04.165+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55920
+time=2025-06-12T16:56:04.182+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55921
+time=2025-06-12T16:56:28.811+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55925
+time=2025-06-12T16:56:28.835+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55926
+time=2025-06-12T16:56:28.852+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55927
+time=2025-06-12T16:56:28.867+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55928
+time=2025-06-12T16:56:28.882+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55929
+time=2025-06-12T16:56:28.895+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55930
+time=2025-06-12T16:56:28.908+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55931
+time=2025-06-12T16:56:28.920+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55932
+time=2025-06-12T16:56:28.934+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55933
+time=2025-06-12T16:56:28.946+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55934
+time=2025-06-12T16:56:28.959+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55935
+time=2025-06-12T16:56:28.973+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55936
+time=2025-06-12T16:56:28.988+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55937
+time=2025-06-12T16:56:29.006+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55938
+time=2025-06-12T16:56:29.025+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55939
+time=2025-06-12T16:56:29.061+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55940
+time=2025-06-12T16:56:29.086+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55941
+time=2025-06-12T16:56:29.112+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55942
+time=2025-06-12T16:56:29.132+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55943
+time=2025-06-12T16:56:29.147+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55944
+time=2025-06-12T16:56:29.161+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55945
+time=2025-06-12T16:56:29.178+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55946
+time=2025-06-12T16:56:29.193+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55947
+time=2025-06-12T16:56:29.230+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55948
+time=2025-06-12T16:56:29.254+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55949
+time=2025-06-12T16:56:29.275+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55950
+time=2025-06-12T16:56:29.294+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55951
+time=2025-06-12T16:56:29.309+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55952
+time=2025-06-12T16:56:29.329+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55953
+time=2025-06-12T16:56:29.347+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55954
+time=2025-06-12T16:56:29.365+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55955
+time=2025-06-12T16:56:29.381+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55956
+time=2025-06-12T16:56:29.398+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55957
+time=2025-06-12T16:56:29.413+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55958
+time=2025-06-12T16:56:29.429+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55959
+time=2025-06-12T16:56:29.445+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55960
+time=2025-06-12T16:56:29.464+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55961
+time=2025-06-12T16:56:29.479+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55962
+time=2025-06-12T16:56:29.497+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55963
+time=2025-06-12T16:56:29.516+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55964
+time=2025-06-12T16:56:29.533+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55965
+time=2025-06-12T16:56:29.551+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55966
+time=2025-06-12T16:56:29.568+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55967
+time=2025-06-12T16:56:29.585+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55968
+time=2025-06-12T16:56:29.602+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55969
+time=2025-06-12T16:56:29.620+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55970
+time=2025-06-12T16:56:29.636+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55971
+time=2025-06-12T16:56:29.652+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55972
+time=2025-06-12T16:56:29.670+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55973
+time=2025-06-12T16:56:29.685+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55974
+time=2025-06-12T16:56:29.701+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55975
+time=2025-06-12T16:56:29.714+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55976
+time=2025-06-12T16:56:29.730+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55977
+time=2025-06-12T16:56:29.747+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55978
+time=2025-06-12T16:56:29.761+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55979
+time=2025-06-12T16:56:29.776+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55980
+time=2025-06-12T16:56:29.795+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55981
+time=2025-06-12T16:56:29.810+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55982
+time=2025-06-12T16:56:29.827+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55983
+time=2025-06-12T16:56:29.845+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55984
+time=2025-06-12T16:56:29.863+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55985
+time=2025-06-12T16:56:29.883+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55986
+time=2025-06-12T16:56:29.901+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55987
+time=2025-06-12T16:56:29.915+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55988
+time=2025-06-12T16:56:29.931+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55989
+time=2025-06-12T16:56:29.948+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55990
+time=2025-06-12T16:56:29.964+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55991
+time=2025-06-12T16:56:29.980+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55992
+time=2025-06-12T16:56:29.997+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55993
+time=2025-06-12T16:56:30.012+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55994
+time=2025-06-12T16:56:30.028+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55995
+time=2025-06-12T16:56:30.045+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55996
+time=2025-06-12T16:56:30.060+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55997
+time=2025-06-12T16:56:30.076+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55998
+time=2025-06-12T16:56:30.114+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:55999
+time=2025-06-12T16:56:30.143+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:56000
+time=2025-06-12T16:56:30.166+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:56001
+time=2025-06-12T16:56:30.186+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:56002
+time=2025-06-12T16:56:30.206+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:56003
+time=2025-06-12T16:56:30.227+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:56004
+time=2025-06-12T16:56:30.248+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:56005
+time=2025-06-12T16:56:30.265+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:56006
+time=2025-06-12T16:56:30.284+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:56007
+time=2025-06-12T16:56:30.305+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:56008
+time=2025-06-12T16:56:30.325+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:56009
+time=2025-06-12T16:56:30.343+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:56010
+time=2025-06-12T16:56:30.358+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:56011
+time=2025-06-12T16:56:30.374+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:56012
+time=2025-06-12T16:56:30.392+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:56013
+time=2025-06-12T16:56:30.409+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:56014
+time=2025-06-12T16:56:30.424+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:56015
+time=2025-06-12T16:56:30.444+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:56016
+time=2025-06-12T16:56:30.460+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:56017
+time=2025-06-12T16:56:30.477+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:56018
+time=2025-06-12T16:56:30.495+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:56019
+time=2025-06-12T16:56:30.511+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:56020
+time=2025-06-12T16:56:30.529+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:56021
+time=2025-06-12T16:56:30.563+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:56022
+time=2025-06-12T16:56:30.590+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:56023
+time=2025-06-12T16:56:30.612+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:56024
+time=2025-06-12T16:59:14.816+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:56146
+time=2025-06-12T17:02:59.959+05:30 level=INFO msg="received request" method=GET path=/calculate ip=[::1]:56365

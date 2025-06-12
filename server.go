@@ -8,8 +8,11 @@ import (
 
 	"log/slog"
 	"os"
-
 	"github.com/rs/cors"
+
+	"sync"
+	"time"
+	"golang.org/x/time/rate"
 )
 
 type CalcRequest struct {
@@ -159,6 +162,16 @@ func divideHandler(w http.ResponseWriter, r *http.Request) {
 
 var logger *slog.Logger
 
+
+
+type visitor struct {
+	limiter  *rate.Limiter
+	lastSeen time.Time
+}
+
+var visitors = make(map[string]*visitor)
+var mu sync.Mutex // mutex to protect visitors map
+
 func init() {
 	file, err := os.OpenFile("server.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
 if err != nil {
@@ -167,7 +180,56 @@ if err != nil {
 
 logger = slog.New(slog.NewTextHandler(file, &slog.HandlerOptions{Level: slog.LevelInfo}))
 
+go cleanupVisitors()
+
 }
+
+func getVisitor(ip string) *rate.Limiter {
+	mu.Lock()
+	defer mu.Unlock()  // ensure thread-safe access to visitors map
+
+	v, exists := visitors[ip]
+	if !exists {
+		limiter := rate.NewLimiter(0.2, 5) // 1 req per 5s, burst of 5
+		visitors[ip] = &visitor{limiter, time.Now()}
+		return limiter
+	}
+
+	v.lastSeen = time.Now()
+	return v.limiter
+}
+
+func cleanupVisitors() {
+	for {
+		time.Sleep(time.Minute)
+		mu.Lock()
+		for ip, v := range visitors {
+			if time.Since(v.lastSeen) > 3*time.Minute {
+				delete(visitors, ip)
+			}
+		}
+		mu.Unlock()
+	}
+}
+
+func rateLimitMiddleware(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		ip := r.RemoteAddr
+		if fwd := r.Header.Get("X-Forwarded-For"); fwd != "" {
+			ip = fwd
+		}
+
+		limiter := getVisitor(ip)
+		if !limiter.Allow() {
+			logger.Warn("rate limit exceeded", "ip", ip)
+			http.Error(w, "Too Many Requests", http.StatusTooManyRequests)
+			return
+		}
+
+		next.ServeHTTP(w, r)
+	})
+}
+
 
 
 func loggingMiddleware(next http.Handler) http.Handler {
@@ -204,11 +266,12 @@ func main() {
 
 	corshandler := cors.AllowAll().Handler(server)
 	logHandler := loggingMiddleware(corshandler)
+	rateLimitedHandler := rateLimitMiddleware(logHandler)
 	
 	fmt.Println("Server started at http://localhost:8080")
 	logger.Info("Server starting on :8080")
 
-	http.ListenAndServe(":8080", logHandler)
+	http.ListenAndServe(":8080", rateLimitedHandler)
 
 	//test curl
 	// curl -X GET http://localhost:8080/calculate -H "Content-Type: application/json" -d "{\"a\":10, \"b\":4, \"op\":\"add\"}"

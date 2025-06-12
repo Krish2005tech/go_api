@@ -148,6 +148,21 @@ func jsonHandler(w http.ResponseWriter, r *http.Request) {
 
 
 
+cors.New(cors.Options{
+    AllowedOrigins:   []string{"http://localhost:3000"},
+    AllowCredentials: true,
+})
+
+
+How init() works in Go:
+Every .go file can have an init() function.
+
+The Go runtime automatically calls all init() functions:
+
+Before main()
+
+After package-level variables are initialized
+
 
 
 
